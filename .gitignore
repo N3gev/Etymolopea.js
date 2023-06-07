@@ -130,7 +130,6 @@ dist
 .pnp.*
 
 # Sensitive files
-*.ticket
 *.json
 
 
