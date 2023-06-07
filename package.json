@@ -1,0 +1,23 @@
+{
+  "name": "etymolopea",
+  "version": "1.0.0",
+  "description": "Discord bot for studying",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GKalmus/Etymolopea.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GKalmus/Etymolopea.js/issues"
+  },
+  "homepage": "https://github.com/GKalmus/Etymolopea.js#readme",
+  "dependencies": {
+    "discord.js": "^14.11.0"
+  }
+}
