@@ -27,7 +27,7 @@ Click [here](https://discord.com/api/oauth2/authorize?client_id=1116114284636803
 - List of homework.
 - Deadline reminder.
 - Study method reminder.
-- 
+- Flashcards.
 - Website.
 
 ## Some Examples
