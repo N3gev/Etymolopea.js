@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -11,18 +12,17 @@ module.exports = {
         .setRequired(false)),
     async execute(interaction) {
         const target = interaction.options.getUser('target') ?? interaction.user;
-        // at the top of your file
-        const { EmbedBuilder } = require('discord.js');
 
-        // inside a command, event listener, etc.
-            const embed = new EmbedBuilder()
-            .setColor(0x0099FF)
+        const embed = new EmbedBuilder()
+            .setColor(Math.floor(Math.random()*16777215).toString(16).padStart(6, '0'))
             .setTitle(`${target.username}'s profile picture`)
-            .setImage(target.avatarURL())
+            .setImage(target.displayAvatarURL({ size: 2048, dynamic: true }))
             .setTimestamp()
-            .setFooter({ text: `Küsis: ${interaction.user.username}`});
-        // interaction.user is the object representing the User who ran the command
-        // interaction.member is the GuildMember object, which represents the user in the specific guild
+            .setFooter({ 
+                text: interaction.user.username, 
+                iconURL: interaction.user.displayAvatarURL({size:2048, dynamic: true})
+            });
+
         await interaction.reply({ embeds: [embed] });
 
     },
